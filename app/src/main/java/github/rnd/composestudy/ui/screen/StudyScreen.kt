@@ -12,11 +12,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.AsyncImage
+import com.google.accompanist.pager.ExperimentalPagerApi
+import com.google.accompanist.pager.HorizontalPager
+import github.rnd.composestudy.ui.component.SwiperContent
 import github.rnd.composestudy.ui.component.TopAppBar
 import github.rnd.composestudy.viewmodel.MainViewModel
 
@@ -25,6 +30,7 @@ import github.rnd.composestudy.viewmodel.MainViewModel
  * created by ArdWang 2022/10/27:4:05 下午
  */
 
+@OptIn(ExperimentalPagerApi::class)
 @Composable
 fun StudyScreen(vm: MainViewModel = viewModel()){
 
@@ -70,6 +76,7 @@ fun StudyScreen(vm: MainViewModel = viewModel()){
                  tint = Color.White)
 
          }
+
         //分类标签
         TabRow(
             selectedTabIndex = vm.categoryIndex,
@@ -116,6 +123,10 @@ fun StudyScreen(vm: MainViewModel = viewModel()){
                 )
             }
         }
+
+        // 轮播图
+        SwiperContent(vm = vm)
+
     }
 }
 

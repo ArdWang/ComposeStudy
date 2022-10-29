@@ -76,6 +76,14 @@ dependencies {
     // 下拉刷新
     implementation "com.google.accompanist:accompanist-swiperefresh:0.27.0"
 
+    // 轮播图
+    implementation "com.google.accompanist:accompanist-pager:$accompanist_version"
+
+    //com.google.accompanist:accompanist-pager
+
+    // 图片加载
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
+
 
 
 

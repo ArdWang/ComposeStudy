@@ -10,6 +10,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import github.rnd.composestudy.model.entity.Category
 import github.rnd.composestudy.model.entity.DataType
+import github.rnd.composestudy.model.entity.SwiperEntity
 
 /**
  * created by ArdWang 2022/10/28:2:07 下午
@@ -50,6 +51,16 @@ class MainViewModel: ViewModel() {
         currentTypeIndex = index
     }
 
+
+    // 轮播图数据
+    val swiperData = listOf(
+        SwiperEntity("https://docs.bughub.icu/compose/assets/banner1.webp"),
+        SwiperEntity("https://docs.bughub.icu/compose/assets/banner2.webp"),
+        SwiperEntity("https://docs.bughub.icu/compose/assets/banner3.webp"),
+        SwiperEntity("https://docs.bughub.icu/compose/assets/banner4.jpg"),
+        SwiperEntity("https://docs.bughub.icu/compose/assets/banner5.jpg")
+
+    )
 
 
 
